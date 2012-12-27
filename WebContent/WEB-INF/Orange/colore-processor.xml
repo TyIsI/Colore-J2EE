@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Colore:processor id="" xmlns:Colore="http://www.colore-framework.org/colore-processor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.colore-framework.org/colore-processor colore-processor.xsd ">
+  <inject>inject</inject>
+  <parameters>
+    <parameter name="" value=""/>
+  </parameters>
+  <logic>
+    <call className="" methodName=""/>
+  </logic>
+</Colore:processor>

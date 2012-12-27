@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema targetNamespace="http://www.colore-framework.org/colore-application" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Colore="http://www.colore-framework.org/colore-application">
+
+	<xs:complexType name="settings">
+		<xs:sequence>
+			<xs:element name="logname" type="xs:string" maxOccurs="1"
+				minOccurs="1">
+			</xs:element>
+			<xs:element name="loglevel" type="xs:int" maxOccurs="1"
+				minOccurs="1">
+			</xs:element>
+			<xs:element name="resolverzone" type="xs:string"
+				maxOccurs="1" minOccurs="1">
+			</xs:element>
+
+
+
+			<xs:any minOccurs="0" maxOccurs="unbounded"></xs:any>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="application">
+		<xs:sequence>
+			<xs:element name="helpers" type="Colore:helpers" maxOccurs="1"
+				minOccurs="0">
+			</xs:element>
+            <xs:element name="resolvers" type="Colore:resolvers" maxOccurs="1" minOccurs="1">
+			</xs:element>
+            <xs:element name="settings" type="Colore:settings" maxOccurs="1"
+				minOccurs="0">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="helpers">
+		<xs:sequence>
+			<xs:element name="input" type="xs:string" maxOccurs="1"
+				minOccurs="1">
+			</xs:element>
+
+			<xs:element name="output" type="xs:string" maxOccurs="1"
+				minOccurs="0">
+			</xs:element>
+			<xs:element name="exception" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+
+	<xs:complexType name="resolver">
+		<xs:attribute name="classPath" type="xs:string" use="required"></xs:attribute>
+		<xs:attribute name="storePath" type="xs:string" use="required"></xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="resolvers">
+		<xs:sequence>
+			<xs:element name="resolver" type="Colore:resolver"
+				maxOccurs="unbounded" minOccurs="1">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="application" type="Colore:application"></xs:element>
+
+</xs:schema>

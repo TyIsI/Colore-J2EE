@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Colore:application xmlns:Colore="http://www.colore-framework.org/colore-application" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.colore-framework.org/colore-application colore-application.xsd ">
+  <helpers>
+    <input>input</input>
+    <output>output</output>
+    <exception>exception</exception>
+  </helpers>
+  <resolvers>
+    <resolver classPath="" storePath=""/>
+  </resolvers>
+  <settings>
+    <logname>logname</logname>
+    <loglevel>0</loglevel>
+    <resolverzone>resolverzone</resolverzone>
+  </settings>
+</Colore:application>
